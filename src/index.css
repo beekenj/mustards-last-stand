@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Mustards;
+  src: url('../src/assets/fonts/HipHop\ Demi\ Regular.otf');
+}
+
+@theme {
+  --font-hiphop: Mustards, "sans-serif";
+}
