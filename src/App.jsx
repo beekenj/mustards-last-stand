@@ -1,16 +1,28 @@
 import MustardsLogo from './assets/img/MLS_Web_Logo.png'
+import Squiggle from './assets/img/squiggle.png'
+import Squiggle2 from './assets/img/squiggle2.png'
+
+// components
+import Button from './components/Button'
+import Home from './components/Home'
+import Boulder from './components/Boulder'
+
+import { useState } from 'react'
 
 function App() {
+  const [sectionSelect, setSectionSelect] = useState("Home")
+
+  function locationClick(location) {
+    setSectionSelect(location)
+  }
+
+  // console.log(sectionSelect)
 
   return (
-    <div className="">
-      <div className="bg-red-600 p-5 m-5">
-        <img className="mx-auto m-10" src={MustardsLogo} alt="MustardsLogo"/>
-        <p className="text-3xl font-semibold text-center text-red-50 font-hiphop">Boulder</p>
-        <hr className="w-48 h-1 mx-auto bg-neutral-quaternary border-red-50 border-4 rounded-sm md:my-0"></hr>
-        <p className="text-3xl font-semibold text-center text-red-50 font-hiphop">Denver</p>
-      </div>
-    </div>
+    <>
+      {sectionSelect == "Home" && <Home locationClick={locationClick} />}
+      {sectionSelect == "Boulder" && <Boulder locationClick={locationClick} />}
+    </>
   )
 }
 
