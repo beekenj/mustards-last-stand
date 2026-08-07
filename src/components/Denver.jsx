@@ -6,8 +6,8 @@ import LinkButton from './LinkButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-export default function Boulder({locationClick, sectionClick}) {
-    const pickup = 'https://order.spoton.com/so-mustards-last-stand-18568/boulder-co/6605f4f55abce32f88e9b50b'
+export default function Denver({locationClick, sectionClick}) {
+    const pickup = 'https://order.spoton.com/so-mustards-last-stand-18568/denver-co/6605b94f5abce32f88e9a6a9'
 
     function handleRedirect(url) {
         window.open = url
@@ -17,7 +17,7 @@ export default function Boulder({locationClick, sectionClick}) {
         <div className='bg-red-600 flex flex-col justify-between h-full'>
             {/* middle upper */}
             <div>
-                <p className="text-xl m-6 font-semibold text-center text-red-50 font-hiphop">Order Online in Boulder</p>
+                <p className="text-xl m-6 font-semibold text-center text-red-50 font-hiphop">Order Online in Denver</p>
                 <LinkButton href={pickup} text="Pickup" />
                 <img className="mx-auto m-6 scale-70" src={Squiggle} alt="Line"/>
                 <LinkButton href={pickup} text="Delivery" />
@@ -25,11 +25,12 @@ export default function Boulder({locationClick, sectionClick}) {
             {/* middle lower */}
             <div className=''>
                 <p className="text-md font-semibold text-center text-red-50 font-hiphop">Hours</p>
-                <p className="text-md font-thin text-center text-red-50 ">OPEN DAILY</p>
-                <p className="text-lg font-normal text-center text-red-50 ">11 a.m. - 8 p.m</p>
+                <p className="text-md font-Normal text-center text-red-50 ">OPEN DAILY at 11:00 a.m.</p>
+                <p className="text-lg font-normal text-center text-red-50 ">Sunday-Thurs open until 8 p.m</p>
+                <p className="text-lg font-normal text-center text-red-50 ">Friday & Saturday OPEN LATE until 10 p.m</p>
                 <p className="text-sm m-3 font-thin text-center text-red-50 ">**Hours may be subject to change.**</p>
-                <p className="text-md font-thin text-center text-red-50 ">Address: 1719 Broadway</p>
-                <p className="text-md font-thin text-center text-red-50 ">Phone: 303-444-5841</p>
+                <p className="text-md font-thin text-center text-red-50 ">Address: 2081 S. University Blvd.</p>
+                <p className="text-md font-thin text-center text-red-50 ">Phone: 303-722-7936</p>
             </div>
             {/* bottom bar */}
             <div className='flex justify-center'>

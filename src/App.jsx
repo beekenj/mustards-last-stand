@@ -1,28 +1,54 @@
+// assets
 import MustardsLogo from './assets/img/MLS_Web_Logo.png'
-import Squiggle from './assets/img/squiggle.png'
-import Squiggle2 from './assets/img/squiggle2.png'
 
 // components
-import Button from './components/Button'
+import Button from './components/SectionButton'
 import Home from './components/Home'
 import Boulder from './components/Boulder'
+import Denver from './components/Denver'
 
 import { useState } from 'react'
 
 function App() {
-  const [sectionSelect, setSectionSelect] = useState("Home")
+  const [locationSelect, setLocationSelect] = useState("None")
+  const [sectionSelect, setSectionSelect] = useState("Order")
 
+  
   function locationClick(location) {
-    setSectionSelect(location)
+    console.log(location)
+    setLocationSelect(location)
   }
 
-  // console.log(sectionSelect)
+
+  function sectionClick(section) {
+    setSectionSelect(section)
+  }
+
 
   return (
-    <>
-      {sectionSelect == "Home" && <Home locationClick={locationClick} />}
-      {sectionSelect == "Boulder" && <Boulder locationClick={locationClick} />}
-    </>
+    <div className="h-dvh">
+      <div className='bg-red-600 h-full flex-col'>
+        <div className='bg-red-600 h-1/10 p-3' onClick={() => locationClick("None")}>
+            <img className='mx-auto' src={MustardsLogo} alt="MustardsLogo"/>
+        </div>
+        <div className='bg-red-600 h-[86dvh] p-2 mt-2'>
+        {/* <div> */}
+          {locationSelect == "None" && <Home locationClick={locationClick} />}
+          {locationSelect == "Boulder" && sectionSelect == "Order" &&
+            <Boulder 
+              locationClick={locationClick} 
+              sectionClick={sectionClick}
+            />
+          }
+          {locationSelect == "Denver" && sectionSelect == "Order" &&
+            <Denver 
+              locationClick={locationClick} 
+              sectionClick={sectionClick}
+            />
+          }
+        </div>
+      </div>
+    </div>
   )
 }
 
