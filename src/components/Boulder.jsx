@@ -28,19 +28,19 @@ export default function Boulder({locationClick, sectionClick}) {
                 <p className="text-md font-thin text-center text-red-50 ">OPEN DAILY</p>
                 <p className="text-lg font-normal text-center text-red-50 ">11 a.m. - 8 p.m</p>
                 <p className="text-sm m-3 font-thin text-center text-red-50 ">**Hours may be subject to change.**</p>
-                <p className="text-md font-thin text-center text-red-50 ">Address: 1719 Broadway</p>
-                <p className="text-md font-thin text-center text-red-50 ">Phone: 303-444-5841</p>
+                <p className="text-md font-normal text-center text-red-50 ">Address: 1719 Broadway</p>
+                <p className="text-md font-normal text-center text-red-50 ">Phone: 303-444-5841</p>
             </div>
             {/* bottom bar */}
             <div className='flex justify-center'>
                 <div className='scale-85'>
-                    <Button text="Menu" handleClick={locationClick} />
+                    <Button text="Menu" handleClick={sectionClick} />
                 </div>
                 <div className='scale-85'>
-                    <Button text="Catering" handleClick={locationClick} />
+                    <Button text="Catering" handleClick={sectionClick} />
                 </div>
                 <div className='scale-85'>
-                    <Button text="About" handleClick={locationClick} />
+                    <Button text="About" handleClick={sectionClick} />
                 </div>
             </div>
         </div>

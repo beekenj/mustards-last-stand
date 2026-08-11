@@ -6,6 +6,9 @@ import Button from './components/SectionButton'
 import Home from './components/Home'
 import Boulder from './components/Boulder'
 import Denver from './components/Denver'
+import Menu from './components/Menu'
+import Catering from './components/Catering'
+import About from './components/About'
 
 import { useState } from 'react'
 
@@ -15,7 +18,6 @@ function App() {
 
   
   function locationClick(location) {
-    console.log(location)
     setLocationSelect(location)
   }
 
@@ -28,7 +30,10 @@ function App() {
   return (
     <div className="h-dvh">
       <div className='bg-red-600 h-full flex-col'>
-        <div className='bg-red-600 h-1/10 p-3' onClick={() => locationClick("None")}>
+        <div className='bg-red-600 h-1/10 p-3' onClick={() => {
+          locationClick("None")
+          sectionClick("Order")
+          }}>
             <img className='mx-auto' src={MustardsLogo} alt="MustardsLogo"/>
         </div>
         <div className='bg-red-600 h-[86dvh] p-2 mt-2'>
@@ -45,6 +50,15 @@ function App() {
               locationClick={locationClick} 
               sectionClick={sectionClick}
             />
+          }
+          {sectionSelect == "Menu" && 
+            <Menu />
+          }
+          {sectionSelect == "Catering" && 
+            <Catering />
+          }
+          {sectionSelect == "About" && 
+            <About />
           }
         </div>
       </div>

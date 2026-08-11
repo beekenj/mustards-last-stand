@@ -29,8 +29,8 @@ export default function Denver({locationClick, sectionClick}) {
                 <p className="text-lg font-normal text-center text-red-50 ">Sunday-Thurs open until 8 p.m</p>
                 <p className="text-lg font-normal text-center text-red-50 ">Friday & Saturday OPEN LATE until 10 p.m</p>
                 <p className="text-sm m-3 font-thin text-center text-red-50 ">**Hours may be subject to change.**</p>
-                <p className="text-md font-thin text-center text-red-50 ">Address: 2081 S. University Blvd.</p>
-                <p className="text-md font-thin text-center text-red-50 ">Phone: 303-722-7936</p>
+                <p className="text-md font-normal text-center text-red-50 ">Address: 2081 S. University Blvd.</p>
+                <p className="text-md font-normal text-center text-red-50 ">Phone: 303-722-7936</p>
             </div>
             {/* bottom bar */}
             <div className='flex justify-center'>
