@@ -25,7 +25,7 @@ function App() {
   function sectionClick(section) {
     setSectionSelect(section)
   }
-
+  console.log(sectionSelect)
 
   return (
     <div className="h-dvh">

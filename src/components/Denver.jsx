@@ -35,13 +35,13 @@ export default function Denver({locationClick, sectionClick}) {
             {/* bottom bar */}
             <div className='flex justify-center'>
                 <div className='scale-85'>
-                    <Button text="Menu" handleClick={locationClick} />
+                    <Button text="Menu" handleClick={sectionClick} />
                 </div>
                 <div className='scale-85'>
-                    <Button text="Catering" handleClick={locationClick} />
+                    <Button text="Catering" handleClick={sectionClick} />
                 </div>
                 <div className='scale-85'>
-                    <Button text="About" handleClick={locationClick} />
+                    <Button text="About" handleClick={sectionClick} />
                 </div>
             </div>
         </div>
